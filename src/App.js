@@ -31,7 +31,7 @@ function App() {
       <Projects />
       <Contact />
       <footer className="footer">
-        <p>&copy; 2025 Hugo Ribeiro. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Hugo Ribeiro. All rights reserved.</p>
       </footer>
     </div>
   );
