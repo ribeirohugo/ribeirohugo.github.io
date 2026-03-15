@@ -3,7 +3,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('../assets/background.jpg') center center / cover no-repeat;
   color: white;
   text-align: center;
   padding: 2rem;
@@ -52,7 +53,7 @@
 
 .btn-primary {
   background-color: white;
-  color: #667eea;
+  color: #333;
 }
 
 .btn-secondary {
