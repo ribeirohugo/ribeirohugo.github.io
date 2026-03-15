@@ -26,8 +26,8 @@
 .skill-category {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
-  color: #667eea;
-  border-bottom: 2px solid #667eea;
+  color: #2563eb;
+  border-bottom: 2px solid #2563eb;
   padding-bottom: 0.5rem;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .skill-tag {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 20px;
