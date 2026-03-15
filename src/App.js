@@ -12,10 +12,10 @@ function App() {
     <div className="App">
       <nav className="navbar">
         <div className="nav-container">
-          <h2 className="nav-logo">
-            <img src={codingComputerLogo} alt="" className="nav-logo-icon" aria-hidden="true" />
+          <a href="#home" className="nav-logo">
+            <img src={codingComputerLogo} alt="Hugo Ribeiro home" className="nav-logo-icon" />
             <span>HR</span>
-          </h2>
+          </a>
           <ul className="nav-menu">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
