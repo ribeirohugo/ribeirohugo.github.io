@@ -89,10 +89,10 @@ const Projects = () => {
                   <span key={idx} className="topic-tag">{topic}</span>
                 ))}
               </div>
-              <a 
-                href={project.url} 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="project-link"
               >
                 View on GitHub →
@@ -101,9 +101,9 @@ const Projects = () => {
           ))}
         </div>
         <div className="projects-footer">
-          <a 
-            href="https://github.com/ribeirohugo?tab=repositories" 
-            target="_blank" 
+          <a
+            href="https://github.com/ribeirohugo?tab=repositories"
+            target="_blank"
             rel="noopener noreferrer"
             className="view-all-btn"
           >
