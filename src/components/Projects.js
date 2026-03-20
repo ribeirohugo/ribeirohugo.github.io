@@ -28,28 +28,12 @@ const Projects = () => {
       language: 'Go'
     },
     {
-      title: 'Docker Startup',
-      description: 'Easy Docker configs for LEMP/LAMP stack, Golang, MySQL, PostgreSQL and more.',
-      topics: ['Docker', 'LEMP', 'LAMP', 'Nginx', 'Apache', 'MySQL', 'PHP'],
-      url: 'https://github.com/ribeirohugo/docker_startup',
-      stars: 0,
-      language: 'Dockerfile'
-    },
-    {
       title: 'Repo Backup',
       description: 'Git repositories backup system written in Go.',
       topics: ['Go', 'Git', 'Backup'],
       url: 'https://github.com/ribeirohugo/repo_backup',
       stars: 0,
       language: 'Go'
-    },
-    {
-      title: 'Symfony Users',
-      description: 'Symfony Rest API to manage users using onion architecture.',
-      topics: ['PHP', 'Symfony', 'REST API', 'Onion Architecture'],
-      url: 'https://github.com/ribeirohugo/symfony_users',
-      stars: 0,
-      language: 'PHP'
     },
     {
       title: 'Go Content Getter',
