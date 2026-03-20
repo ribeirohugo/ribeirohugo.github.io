@@ -46,6 +46,28 @@
   font-size: 1.1rem;
 }
 
+.about-actions {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.btn-view-more {
+  display: inline-block;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-view-more:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
 @media (max-width: 768px) {
   .about {
     padding: 3rem 1rem;

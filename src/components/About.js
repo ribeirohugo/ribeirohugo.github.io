@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './About.css';
 
 const About = () => {
@@ -22,6 +23,9 @@ const About = () => {
               When I'm not coding, I enjoy contributing to open-source projects, learning about system
               design patterns, and staying updated with the latest trends in software engineering.
             </p>
+          </div>
+          <div className="about-actions">
+            <Link to="/about" className="btn-view-more">View More</Link>
           </div>
         </div>
       </div>
