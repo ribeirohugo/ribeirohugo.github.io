@@ -8,6 +8,8 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import AboutPage from './components/AboutPage';
+import Portfolio from './components/Portfolio';
+import Portfolio2 from './components/Portfolio2';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -47,6 +49,8 @@ function AppShell() {
             <li><a href="#about" onClick={(e) => handleNavClick(e, 'about')}>About</a></li>
             <li><a href="#skills" onClick={(e) => handleNavClick(e, 'skills')}>Skills</a></li>
             <li><a href="#projects" onClick={(e) => handleNavClick(e, 'projects')}>Projects</a></li>
+            <li><a href="#portfolio" onClick={(e) => handleNavClick(e, 'portfolio')}>Portfolio</a></li>
+            <li><a href="#portfolio2" onClick={(e) => handleNavClick(e, 'portfolio2')}>Portfolio 2.0</a></li>
             <li><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>Contact</a></li>
           </ul>
         </div>
@@ -58,6 +62,8 @@ function AppShell() {
             <About />
             <Skills />
             <Projects />
+            <Portfolio />
+            <Portfolio2 />
             <Contact />
           </>
         } />

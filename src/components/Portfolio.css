@@ -1,0 +1,261 @@
+/* ============================================================
+   Portfolio Section
+   ============================================================ */
+
+.portfolio {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+  color: white;
+}
+
+.portfolio .section-title {
+  color: white;
+}
+
+.portfolio-subtitle {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+/* ---- Slider wrapper ---- */
+.portfolio-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+/* ---- Arrow buttons ---- */
+.slider-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  font-size: 2.2rem;
+  line-height: 1;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.2s;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-btn:hover {
+  background: rgba(59, 130, 246, 0.55);
+  transform: scale(1.1);
+}
+
+/* ---- Slide track & animations ---- */
+.slider-track {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Slide in (resting state) */
+.slide-in {
+  animation: slideIn 0.35s ease both;
+}
+
+/* Slide out toward left (going "next") */
+.slide-out-next {
+  animation: slideOutLeft 0.35s ease both;
+}
+
+/* Slide out toward right (going "prev") */
+.slide-out-prev {
+  animation: slideOutRight 0.35s ease both;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+}
+
+/* ---- Card ---- */
+.portfolio-card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  gap: 1.8rem;
+  align-items: flex-start;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s;
+}
+
+.portfolio-card:hover {
+  box-shadow: 0 12px 40px rgba(59, 130, 246, 0.25);
+}
+
+.portfolio-card__icon {
+  font-size: 3.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.1);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.portfolio-card__category {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #60a5fa;
+}
+
+.portfolio-card__title {
+  font-size: 1.55rem;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+}
+
+.portfolio-card__description {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* ---- Tags ---- */
+.portfolio-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+}
+
+.portfolio-tag {
+  background: rgba(59, 130, 246, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  color: #93c5fd;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+/* ---- Link ---- */
+.portfolio-card__link {
+  display: inline-block;
+  margin-top: 0.6rem;
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.25s, letter-spacing 0.25s;
+}
+
+.portfolio-card__link:hover {
+  color: #93c5fd;
+  letter-spacing: 0.02em;
+}
+
+/* ---- Dots ---- */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 2rem;
+}
+
+.slider-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.25s, border-color 0.25s, transform 0.2s;
+  padding: 0;
+}
+
+.slider-dot--active {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  transform: scale(1.25);
+}
+
+.slider-dot:hover:not(.slider-dot--active) {
+  border-color: white;
+}
+
+/* ---- Counter ---- */
+.slider-counter {
+  text-align: center;
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.9rem;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .portfolio-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.8rem 1.2rem;
+  }
+
+  .portfolio-card__tags {
+    justify-content: center;
+  }
+
+  .portfolio-card__title {
+    font-size: 1.3rem;
+  }
+
+  .slider-btn {
+    width: 2.4rem;
+    height: 2.4rem;
+    font-size: 1.8rem;
+  }
+}

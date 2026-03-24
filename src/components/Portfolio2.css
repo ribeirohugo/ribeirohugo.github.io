@@ -1,0 +1,331 @@
+/* ============================================================
+   Portfolio 2.0 — fixed blue background, animated content swap
+   ============================================================ */
+
+/* ---- Section: exactly one viewport tall ---- */
+.p2-section {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ---- Viewport: fills the whole section ---- */
+.p2-viewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ---- Decorative blobs ---- */
+.p2-blob {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.12;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.p2-blob--1 {
+  width: 500px;
+  height: 500px;
+  top: -150px;
+  right: -100px;
+}
+
+.p2-blob--2 {
+  width: 350px;
+  height: 350px;
+  bottom: -100px;
+  left: 10%;
+}
+
+/* ---- Slide inner: full height, full width column layout ---- */
+.p2-slide-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 5rem 0 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2.5rem;
+  height: 100%;
+}
+
+/* ---- Top: section heading — centered, constrained, no animation ---- */
+.p2-slide-top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.p2-title {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 800;
+  color: white;
+  margin: 0 0 0.3rem;
+  letter-spacing: -0.01em;
+}
+
+.p2-subtitle {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* ---- Body: grows to fill remaining space, clips the sliding track at full viewport width ---- */
+.p2-content-track-wrap {
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+}
+
+/* ---- Track: all panels in a row, slides on translateX ---- */
+.p2-content-track {
+  display: flex;
+  width: 100%;
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* ---- Each panel: full viewport width ---- */
+.p2-content-panel {
+  flex: 0 0 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* ---- Inner: max-width centering lives here, not on the panel ---- */
+.p2-panel-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+/* ---- Left: text ---- */
+.p2-content {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.p2-category {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1.5px solid;
+  border-radius: 20px;
+  padding: 0.25rem 0.9rem;
+  width: fit-content;
+}
+
+.p2-slide-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  color: white;
+  margin: 0;
+  line-height: 1.15;
+}
+
+.p2-slide-desc {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin: 0;
+  max-width: 540px;
+}
+
+/* ---- Tags ---- */
+.p2-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.p2-tag {
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.3rem 0.85rem;
+  border-radius: 20px;
+  border: 1.5px solid;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ---- CTA button ---- */
+.p2-link {
+  display: inline-block;
+  width: fit-content;
+  margin-top: 0.4rem;
+  padding: 0.75rem 1.8rem;
+  border-radius: 8px;
+  color: white !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: filter 0.25s, transform 0.2s;
+}
+
+.p2-link:hover {
+  filter: brightness(1.15);
+  transform: translateY(-2px);
+}
+
+/* ---- Right: icon ---- */
+.p2-icon-wrap {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p2-icon {
+  width: clamp(120px, 16vw, 200px);
+  height: clamp(120px, 16vw, 200px);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  backdrop-filter: blur(10px);
+  transition: transform 0.4s ease;
+}
+
+.p2-icon:hover {
+  transform: scale(1.05) rotate(-3deg);
+}
+
+/* ---- Arrow buttons ---- */
+.p2-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 3rem;
+  line-height: 1;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s, transform 0.2s, border-color 0.25s;
+  backdrop-filter: blur(6px);
+}
+
+.p2-arrow:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.p2-arrow--prev { left: 1.5rem; }
+.p2-arrow--next { right: 1.5rem; }
+
+/* ---- Progress bar ---- */
+.p2-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.p2-progress-fill {
+  height: 100%;
+  transition: width 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* ---- Dots ---- */
+.p2-dots {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  gap: 0.65rem;
+}
+
+.p2-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.25s, border-color 0.25s, transform 0.2s;
+}
+
+.p2-dot--active {
+  transform: scale(1.3);
+}
+
+.p2-dot:hover:not(.p2-dot--active) {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .p2-slide-inner {
+    padding: 3rem 0 5rem;
+    gap: 2rem;
+  }
+
+  .p2-panel-inner {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .p2-content {
+    align-items: center;
+  }
+
+  .p2-slide-desc {
+    max-width: 100%;
+  }
+
+  .p2-tags {
+    justify-content: center;
+  }
+
+  .p2-arrow {
+    width: 2.6rem;
+    height: 2.6rem;
+    font-size: 2.2rem;
+  }
+
+  .p2-arrow--prev { left: 0.5rem; }
+  .p2-arrow--next { right: 0.5rem; }
+}
+
+@media (max-width: 480px) {
+  .p2-icon-wrap {
+    display: none;
+  }
+}
