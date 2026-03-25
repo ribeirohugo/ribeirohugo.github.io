@@ -1,61 +1,12 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { Link } from 'react-router-dom';
+import projects from '../data/projects';
 import './Portfolio2.css';
 
-const ACCENT   = '#3b82f6';
-const BG       = 'linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #1e40af 100%)';
+const ACCENT = '#3b82f6';
+const BG     = 'linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #1e40af 100%)';
 
-const slides = [
-  {
-    id: 1,
-    category: 'Web Development',
-    title: 'Personal Portfolio Website',
-    description:
-      'This very website — a modern, responsive personal portfolio built with React. Features smooth scrolling, dynamic routing, and a clean design that showcases my work and skills.',
-    tags: ['React', 'JavaScript', 'CSS3', 'HTML5'],
-    link: 'https://github.com/ribeirohugo/ribeirohugo',
-    icon: '🌐',
-  },
-  {
-    id: 2,
-    category: 'Backend',
-    title: 'Go REST API',
-    description:
-      'A production-ready REST API boilerplate in Go using onion architecture. Includes repository pattern, service layer, dependency injection, and full CRUD support.',
-    tags: ['Go', 'REST', 'Onion Architecture', 'CRUD'],
-    link: 'https://github.com/ribeirohugo/go_rest_api',
-    icon: '⚙️',
-  },
-  {
-    id: 3,
-    category: 'Security',
-    title: 'Go Middlewares',
-    description:
-      'A reusable collection of HTTP middlewares for Go applications covering authentication (JWT), CORS handling, and structured request logging.',
-    tags: ['Go', 'JWT', 'CORS', 'Auth', 'Logger'],
-    link: 'https://github.com/ribeirohugo/go_middlewares',
-    icon: '🔒',
-  },
-  {
-    id: 4,
-    category: 'DevTools',
-    title: 'Go Config',
-    description:
-      'A flexible configuration loader for Go that supports JSON, YAML, XML, TOML, and environment variables — making app configuration simple and portable.',
-    tags: ['Go', 'JSON', 'YAML', 'TOML', 'Config'],
-    link: 'https://github.com/ribeirohugo/go_config',
-    icon: '🛠️',
-  },
-  {
-    id: 5,
-    category: 'Automation',
-    title: 'Repo Backup',
-    description:
-      'An automated Git repository backup system written in Go. Clones and archives all repositories from a given account, ensuring your code is always safe.',
-    tags: ['Go', 'Git', 'Automation', 'Backup'],
-    link: 'https://github.com/ribeirohugo/repo_backup',
-    icon: '💾',
-  },
-];
+const slides = projects;
 
 const Portfolio2 = () => {
   const [current, setCurrent] = useState(0);
@@ -111,15 +62,12 @@ const Portfolio2 = () => {
                           </span>
                         ))}
                       </div>
-                      <a
-                        href={slide.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p2-link"
-                        style={{ background: ACCENT }}
+                      <Link
+                        to={`/project/${slide.slug}`}
+                        className="p2-detail-link"
                       >
-                        View Project →
-                      </a>
+                        View Details →
+                      </Link>
                     </div>
 
                     <div className="p2-icon-wrap">

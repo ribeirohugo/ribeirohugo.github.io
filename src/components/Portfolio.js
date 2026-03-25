@@ -1,58 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { Link } from 'react-router-dom';
+import projects from '../data/projects';
 import './Portfolio.css';
 
-const portfolioItems = [
-  {
-    title: 'Personal Portfolio Website',
-    category: 'Web Development',
-    description:
-      'This very website — a modern, responsive personal portfolio built with React. Features smooth scrolling, dynamic routing, and a clean design that showcases my work and skills.',
-    tags: ['React', 'JavaScript', 'CSS3', 'HTML5'],
-    link: 'https://github.com/ribeirohugo/ribeirohugo',
-    image: null,
-    icon: '🌐',
-  },
-  {
-    title: 'Go REST API',
-    category: 'Backend',
-    description:
-      'A production-ready REST API boilerplate in Go using onion architecture. Includes repository pattern, service layer, dependency injection, and full CRUD support.',
-    tags: ['Go', 'REST', 'Onion Architecture', 'CRUD'],
-    link: 'https://github.com/ribeirohugo/go_rest_api',
-    image: null,
-    icon: '⚙️',
-  },
-  {
-    title: 'Go Middlewares',
-    category: 'Backend',
-    description:
-      'A reusable collection of HTTP middlewares for Go applications covering authentication (JWT), CORS handling, and structured request logging.',
-    tags: ['Go', 'JWT', 'CORS', 'Middleware'],
-    link: 'https://github.com/ribeirohugo/go_middlewares',
-    image: null,
-    icon: '🔒',
-  },
-  {
-    title: 'Go Config',
-    category: 'DevTools',
-    description:
-      'A flexible configuration loader for Go that supports JSON, YAML, XML, TOML, and environment variables — making app configuration simple and portable.',
-    tags: ['Go', 'JSON', 'YAML', 'TOML', 'Config'],
-    link: 'https://github.com/ribeirohugo/go_config',
-    image: null,
-    icon: '🛠️',
-  },
-  {
-    title: 'Repo Backup',
-    category: 'DevTools',
-    description:
-      'An automated Git repository backup system written in Go. Clones and archives all repositories from a given account, ensuring your code is always safe.',
-    tags: ['Go', 'Git', 'Automation', 'Backup'],
-    link: 'https://github.com/ribeirohugo/repo_backup',
-    image: null,
-    icon: '💾',
-  },
-];
+const portfolioItems = projects;
 
 const Portfolio = () => {
   const [current, setCurrent] = useState(0);
@@ -117,9 +68,15 @@ const Portfolio = () => {
                     rel="noopener noreferrer"
                     className="portfolio-card__link"
                   >
-                    View Project →
+                    View on GitHub →
                   </a>
                 )}
+                <Link
+                  to={`/project/${item.slug}`}
+                  className="portfolio-card__detail-link"
+                >
+                  View Details →
+                </Link>
               </div>
             </div>
           </div>

@@ -199,6 +199,26 @@
   letter-spacing: 0.02em;
 }
 
+/* ---- View Details link ---- */
+.portfolio-card__detail-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  background: #3b82f6;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.88rem;
+  border-radius: 8px;
+  transition: background 0.25s, transform 0.2s;
+}
+
+.portfolio-card__detail-link:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  color: white;
+}
+
 /* ---- Dots ---- */
 .slider-dots {
   display: flex;

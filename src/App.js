@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import AboutPage from './components/AboutPage';
 import Portfolio from './components/Portfolio';
 import Portfolio2 from './components/Portfolio2';
+import ProjectPage from './components/ProjectPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -68,6 +69,7 @@ function AppShell() {
           </>
         } />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/project/:slug" element={<ProjectPage />} />
       </Routes>
       <footer className="footer">
         <p>&copy; {new Date().getFullYear()} Hugo Ribeiro. All rights reserved.</p>

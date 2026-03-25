@@ -184,6 +184,31 @@
   transform: translateY(-2px);
 }
 
+/* ---- View Details link ---- */
+.p2-detail-link {
+  display: inline-block;
+  width: fit-content;
+  margin-top: 0.1rem;
+  padding: 0.65rem 1.6rem;
+  border-radius: 8px;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(4px);
+  transition: background 0.25s, border-color 0.25s, transform 0.2s;
+}
+
+.p2-detail-link:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.55);
+  color: white;
+  transform: translateY(-2px);
+}
+
 /* ---- Right: icon ---- */
 .p2-icon-wrap {
   flex-shrink: 0;
