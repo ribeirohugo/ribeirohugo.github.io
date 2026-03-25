@@ -36,8 +36,7 @@ const Portfolio2 = () => {
 
           {/* Heading — always still */}
           <div className="p2-slide-top">
-            <h2 className="p2-title">Portfolio 2.0</h2>
-            <p className="p2-subtitle">Immersive project showcase — swipe or use the arrows</p>
+            <h2 className="p2-title">Portfolio</h2>
           </div>
 
           {/* Sliding content track — only content moves, background stays */}
