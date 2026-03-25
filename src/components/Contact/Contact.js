@@ -1,6 +1,6 @@
 import React from 'react';
 import './Contact.css';
-import { SOCIAL } from '../constants';
+import { SOCIAL } from '../../constants';
 
 const Contact = () => {
   return (

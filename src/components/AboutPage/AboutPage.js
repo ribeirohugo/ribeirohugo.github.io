@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { SOCIAL } from '../constants';
+import { SOCIAL } from '../../constants';
 import './AboutPage.css';
 
 const AboutPage = () => {
@@ -82,4 +82,3 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
-

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import projects from '../data/projects';
+import projects from '../../data/projects';
 import './Portfolio.css';
 
 const portfolioItems = projects;

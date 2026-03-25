@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import projects from '../data/projects';
+import projects from '../../data/projects';
 import './Portfolio2.css';
 
 const ACCENT = '#3b82f6';

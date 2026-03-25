@@ -2,14 +2,14 @@ import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import './App.css';
 import codingComputerLogo from './assets/coding-computer.svg';
-import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import AboutPage from './components/AboutPage';
-import Portfolio from './components/Portfolio';
-import Portfolio2 from './components/Portfolio2';
+import Hero from './components/Hero/Hero';
+import About from './components/About/About';
+import Skills from './components/Skills/Skills';
+import Projects from './components/Projects/Projects';
+import Contact from './components/Contact/Contact';
+import AboutPage from './components/AboutPage/AboutPage';
+import Portfolio from './components/Portfolio/Portfolio';
+import Portfolio2 from './components/Portfolio2/Portfolio2';
 import ProjectPage from './components/ProjectPage';
 
 function ScrollToTop() {

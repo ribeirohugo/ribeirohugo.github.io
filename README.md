@@ -89,7 +89,7 @@ ribeirohugo/
 │   │   └── Contact.css
 │   ├── App.js
 │   ├── App.css
-│   ├── index.js
+│   ├── About.js
 │   └── index.css
 ├── package.json
 └── README.md
