@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import projects from '../../data/projects';
+import portfolioProjects from '../../data/portfolioProjects';
 import './Portfolio2.css';
 
 const ACCENT = '#3b82f6';
 const BG     = 'linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #1e40af 100%)';
 
-const slides = projects;
+const slides = portfolioProjects;
 
 const Portfolio2 = () => {
   const [current, setCurrent] = useState(0);

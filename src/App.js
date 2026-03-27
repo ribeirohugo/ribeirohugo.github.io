@@ -48,8 +48,8 @@ function AppShell() {
             <li><a href="#home" onClick={(e) => handleNavClick(e, 'home')}>Home</a></li>
             <li><a href="#about" onClick={(e) => handleNavClick(e, 'about')}>About</a></li>
             <li><a href="#skills" onClick={(e) => handleNavClick(e, 'skills')}>Skills</a></li>
-            <li><a href="#portfolio2" onClick={(e) => handleNavClick(e, 'portfolio2')}>Portfolio</a></li>
             <li><a href="#projects" onClick={(e) => handleNavClick(e, 'projects')}>Projects</a></li>
+            <li><a href="#portfolio2" onClick={(e) => handleNavClick(e, 'portfolio2')}>Portfolio</a></li>
             <li><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>Contact</a></li>
           </ul>
         </div>
@@ -60,8 +60,8 @@ function AppShell() {
             <Hero />
             <About />
             <Skills />
-            <Portfolio2 />
             <Projects />
+            <Portfolio2 />
             <Contact />
           </>
         } />

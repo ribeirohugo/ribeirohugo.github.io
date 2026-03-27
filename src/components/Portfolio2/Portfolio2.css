@@ -62,26 +62,17 @@
 }
 
 .p2-title {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 800;
   color: white;
-  text-align: center;
-  position: relative;
-  padding-bottom: 1rem;
-  margin: 0 0 3rem;
-  letter-spacing: normal;
+  margin: 0 0 0.3rem;
+  letter-spacing: -0.01em;
 }
 
-.p2-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-  border-radius: 2px;
+.p2-subtitle {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.95rem;
+  margin: 0;
 }
 
 /* ---- Body: grows to fill remaining space, clips the sliding track at full viewport width ---- */

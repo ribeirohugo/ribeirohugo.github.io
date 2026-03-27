@@ -1,12 +1,15 @@
 import React from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import projects from '../../data/projects';
+import portfolioProjects from '../../data/portfolioProjects';
 import './ProjectPage.css';
+
+const allProjects = [...projects, ...portfolioProjects];
 
 const ProjectPage = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
-  const project = projects.find((p) => p.slug === slug);
+  const project = allProjects.find((p) => p.slug === slug);
 
   if (!project) {
     return (
@@ -17,9 +20,9 @@ const ProjectPage = () => {
     );
   }
 
-  const currentIndex = projects.findIndex((p) => p.slug === slug);
-  const prevProject  = projects[currentIndex - 1] ?? null;
-  const nextProject  = projects[currentIndex + 1] ?? null;
+  const currentIndex = allProjects.findIndex((p) => p.slug === slug);
+  const prevProject  = allProjects[currentIndex - 1] ?? null;
+  const nextProject  = allProjects[currentIndex + 1] ?? null;
 
   return (
     <div className="pp-page">
