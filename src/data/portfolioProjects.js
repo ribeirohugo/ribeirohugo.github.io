@@ -40,4 +40,3 @@ const portfolioProjects = [
 ];
 
 export default portfolioProjects;
-
